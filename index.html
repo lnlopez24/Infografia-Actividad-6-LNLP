@@ -4,70 +4,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actividad 6 - Big Data y Data Lakehouse</title>
+
+    <!-- ESTILO MODERNO Y LIMPIO -->
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; background: #f4f4f4; }
-        h1, h2 { color: #333; }
-        .card { background: #fff; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        button { padding: 10px 15px; border: none; background: #007bff; color: #fff; border-radius: 5px; cursor: pointer; }
-        button:hover { background: #0056b3; }
-        .hidden { display: none; }
-        textarea { width: 100%; height: 120px; margin-top: 10px; }
+        body { 
+            font-family: "Segoe UI", Arial, sans-serif; 
+            margin: 0; 
+            padding: 20px; 
+            background: #f7f9fc; 
+            color: #2c2c2c;
+        }
+
+        h1, h2, h3 {
+            color: #0a3a78;
+            margin-bottom: 10px;
+        }
+
+        h2::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #0a3a78;
+            margin-top: 5px;
+            border-radius: 2px;
+        }
+
+        /* Tarjetas generales */
+        .card { 
+            background: #ffffff; 
+            padding: 20px; 
+            margin-bottom: 20px; 
+            border-radius: 12px; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08); 
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+        }
+
+        /* Bloques con hover (elementos clave) */
+        .hover-box {
+            background:#fff;
+            padding:15px;
+            border-radius:10px;
+            margin-bottom:15px;
+            box-shadow:0 2px 5px rgba(0,0,0,0.1);
+            transition:0.3s;
+        }
+
+        .hover-box:hover {
+            background:#eef5ff;
+            transform: translateX(5px);
+        }
+
+        .hover-info {
+            margin-top:10px; 
+            color:#333;
+        }
+
+        ul {
+            padding-left:25px;
+        }
+
+        ul li {
+            margin-bottom:8px;
+        }
+
+        ul li::marker {
+            color:#0a3a78;
+        }
+
+        footer {
+            text-align:center;
+            margin-top:40px;
+            color:#666;
+        }
     </style>
 </head>
 <body>
 
     <h1>Actividad 6: Tendencias de Big Data y Data Lakehouse</h1>
     <h3>Realizado por: Laura Natalia López — Big Data — Unidad 6 — Universidad Católica de Colombia</h3>
-    <p>Objetivo: Comprender las nuevas tendencias de Big Data para el modelamiento de datos dentro de una empresa y su papel en la planificación.</p>
 
-    <style>
-        .hover-box { background:#fff; padding:15px; border-radius:8px; margin-bottom:15px; box-shadow:0 2px 5px rgba(0,0,0,0.1); transition:0.3s; }
-        .hover-box:hover { background:#e9f2ff; cursor:pointer; }
-        .hover-info { display:none; margin-top:10px; }
-        .hover-box:hover .hover-info { display:block; }
-    </style>
+    <p><strong>Objetivo:</strong> Comprender las nuevas tendencias de Big Data para el modelamiento de datos dentro de una empresa y su papel en la planificación.</p>
 
+    <!-- ELEMENTOS CLAVE -->
     <div class="card">
         <h2>Elementos clave del Data Lake Sanitario</h2>
-        <p>A continuación se describe, mediante narración, los cuatro elementos principales identificados en la fuente “Data lake sanitario: qué es y cómo puede mejorar nuestra salud” y cómo se articulan al caso SURA:</p>
+        <p>Descripción narrativa de los cuatro elementos principales identificados en la fuente “Data lake sanitario: qué es y cómo puede mejorar nuestra salud” y su articulación con el caso SURA:</p>
 
         <div class="hover-box">
             <strong>1. Integración de datos estructurados y no estructurados</strong>
-            <div class="hover-info">Los data lakes permiten combinar historiales clínicos, imágenes diagnósticas, sensores IoT y comentarios de pacientes. En SURA esto facilita un ecosistema unificado para análisis preventivo y seguimiento continuo.</div>
+            <div class="hover-info">
+                Los data lakes permiten combinar historiales clínicos, imágenes diagnósticas, sensores IoT y comentarios de pacientes.  
+                En SURA esto facilita un ecosistema unificado para análisis preventivo y seguimiento continuo.
+            </div>
         </div>
 
         <div class="hover-box">
             <strong>2. Acceso flexible y consulta eficiente</strong>
-            <div class="hover-info">La arquitectura lakehouse agrega capacidades de consulta rápida, permitiendo a SURA modelar riesgos, planificar demanda de servicios y optimizar recursos con datos actualizados en tiempo real.</div>
+            <div class="hover-info">
+                La arquitectura lakehouse ofrece consultas rápidas y eficientes.  
+                En SURA permite modelar riesgos, planificar demanda y optimizar recursos con datos actualizados.
+            </div>
         </div>
 
         <div class="hover-box">
             <strong>3. Gobernanza y calidad del dato</strong>
-            <div class="hover-info">La gobernanza garantiza integridad, trazabilidad y seguridad. En SURA es fundamental para cumplir normativas en salud y asegurar que los análisis se basen en datos confiables.</div>
+            <div class="hover-info">
+                La gobernanza garantiza integridad, trazabilidad y seguridad del dato.  
+                En SURA es clave para cumplir con normativas en salud y asegurar que la analítica se base en datos confiables.
+            </div>
         </div>
 
         <div class="hover-box">
             <strong>4. Potencial para analítica avanzada</strong>
-            <div class="hover-info">Los lakehouse soportan analítica predictiva y machine learning. Para SURA, esto significa anticipar tendencias epidemiológicas, personalizar intervenciones y mejorar resultados clínicos.</div>
+            <div class="hover-info">
+                Los lakehouse permiten analítica predictiva y machine learning.  
+                Para SURA esto facilita anticipar tendencias epidemiológicas y mejorar intervenciones clínicas.
+            </div>
         </div>
     </div>
 
+    <!-- APLICACIÓN A SURA -->
     <div class="card">
         <h2>Aplicación de la estructura de Data Lakehouse a SURA</h2>
         <p>La estructura de un data lakehouse aplicada a SURA permite:</p>
         <ul>
             <li>Unificar fuentes clínicas, administrativas y de interacción con usuarios.</li>
-            <li>Habilitar capas de transformación para limpieza y estandarización.</li>
-            <li>Implementar modelos predictivos para gestión de riesgo.</li>
-            <li>Mejorar la planificación operativa mediante análisis de demanda.</li>
+            <li>Habilitar capas de transformación para limpieza y estandarización del dato.</li>
+            <li>Desarrollar modelos predictivos para gestión de riesgo.</li>
+            <li>Optimizar planificación operativa mediante análisis de demanda.</li>
         </ul>
     </div>
 
+    <!-- CONCLUSIONES -->
     <div class="card">
         <h2>Conclusiones</h2>
-        <p>Los data lakehouses representan un avance significativo para organizaciones como SURA, permitiendo consolidar datos heterogéneos y habilitar análisis de alto valor. Su implementación adecuada promueve decisiones basadas en evidencia, mayor eficiencia operativa y mejor conocimiento de las necesidades de los usuarios.</p>
+        <p>
+            Los data lakehouses representan un avance significativo para organizaciones como SURA, al permitir la integración 
+            de datos heterogéneos y ofrecer capacidades de analítica avanzada. Su correcta implementación promueve decisiones basadas 
+            en evidencia, mejora la eficiencia operativa y fortalece la comprensión de las necesidades de los usuarios.
+        </p>
     </div>
 
+    <!-- BIBLIOGRAFÍA -->
     <div class="card">
         <h2>Bibliografía</h2>
         <ul>
@@ -79,5 +163,7 @@
     </div>
 
 </body>
+</html>
 
 </html>
+
